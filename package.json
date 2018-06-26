@@ -1,0 +1,8 @@
+{
+  "name": "mk-response-format",
+  "version": "0.0.1",
+  "description": "respond with same type as request",
+  "main": "index.js",
+  "author": "John Galt",
+  "license": "MIT"
+}
