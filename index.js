@@ -1,13 +1,19 @@
 function getAcceptType(req) {
 
-  if(req.params.ext === 'json' || /application\/json/.test(req.get('accept'))) {
+  if(req.params.ext === 'json') {
     return 'json'; 
-  } else if(req.params.ext === 'html' || /text\/html/.test(req.get('accept'))) {
-    return 'html'; 
-  } else if(req.params.ext === 'xml' || /application\/xml/.test(req.get('accept'))) { 
+  } else if(req.params.ext === 'xml') {
     return 'xml'; 
-  } else {
+  } else if(req.params.ext === 'html') { 
+    return 'html'; 
+  } else if (/application\/json/.test(req.get('accept'))) {
+    return 'json';
+  } else if(/text\/html/.test(req.get('accept'))) {
     return 'html';
+  } else if(/application\/xml/.test(req.get('accept'))) {
+    return 'xml';
+  } else {
+    return 'html'; 
   }
 }
 
