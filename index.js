@@ -4,6 +4,8 @@ function getAcceptType(req) {
     return 'json'; 
   } else if(req.params.ext === 'xml') {
     return 'xml'; 
+  } else if(req.params.ext === 'graph') { 
+    return 'graph'; 
   } else if(req.params.ext === 'html') { 
     return 'html'; 
   } else if (/application\/json/.test(req.get('accept'))) {

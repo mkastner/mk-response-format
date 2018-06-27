@@ -4,5 +4,8 @@
   "description": "respond with same type as request",
   "main": "index.js",
   "author": "John Galt",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "github": "git push -u origin master" 
+  }
 }
